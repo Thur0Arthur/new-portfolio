@@ -1,5 +1,13 @@
-/*Navegação */
+/*Menu Sanduiche*/
+let menuSanduiche = document.querySelector(".menuSanduiche");
+let menuAtivo = document.querySelector("nav");
 
+menuSanduiche.addEventListener("click", () => {
+    menuSanduiche.classList.toggle("clickX");
+    menuAtivo.classList.toggle("menuAtivo");
+});
+
+/*Navegação */
 let inicioBnt = document.querySelector("#bntInicio");
 let sobreBnt = document.querySelector("#bntSobre");
 let projetosBnt = document.querySelector("#bntProjetos");

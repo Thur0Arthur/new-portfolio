@@ -43,6 +43,50 @@ header {
     z-index: 1000;
 
 }
+.menuSanduiche {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 25px;
+    height: 21px;
+}
+.menuSanduiche:hover {
+    opacity: 0.7;
+}
+.menuSanduiche div {
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #E6EDF3;
+    transition: 0.3s ease;
+}
+.menuSanduiche div:nth-child(1) {
+    top: 17px;
+}
+
+.menuSanduiche div:nth-child(2) {
+    top: 27px;
+}
+
+.menuSanduiche div:nth-child(3) {
+    top: 37px;
+}
+
+
+.menuSanduiche.clickX div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 25px;  
+}
+.menuSanduiche.clickX div:nth-child(2) {
+    transform: rotate(-45deg);
+    top: 25px;
+}
+.menuSanduiche.clickX div:nth-child(3) {
+    opacity: 0;
+}
+
+
+
 nav {
     display: flex;
 }
@@ -57,7 +101,52 @@ nav ul li{
 nav ul li a {
     margin-left: 20px;
 }
-
+@media (max-width: 520px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav {
+        position: fixed;
+        top: 55px;
+        right: -60vw;
+        height: 60vh;
+        width: 50vw;
+        background-color: rgba(22, 27, 34, 0.9);
+        border-radius: 0 0 0 50px;
+        display: flex;
+        justify-content: center;
+        transition: right 0.3s ease; 
+    }
+    nav.menuAtivo {
+        right: 0; 
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    nav ul li{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40%;
+        
+    }
+    nav ul li a {
+        margin-left: 0;
+        width: 80%;
+        text-align: center;
+    }
+    .menuSanduiche {
+        display: flex;
+    }
+}
 
 
 
@@ -65,11 +154,7 @@ section {
     height: 100vh;
     margin: auto;
 }
-@media (max-width: 520px) {
-    nav {
-        display: none;
-    }
-}
+
 /*INICIO*/
 
 #inicio {
@@ -241,7 +326,7 @@ section {
     border-radius: 4px;
     transition: transform 0.35s ease;
 }
-.projetosArea div:hover .projPortifolio img {
+.projetosArea div:hover .projPortfolio img {
     transform: scale(1.06);
 }
 .projPortfolio p {
