@@ -12,14 +12,16 @@ let inicioBnt = document.querySelector("#bntInicio");
 let sobreBnt = document.querySelector("#bntSobre");
 let projetosBnt = document.querySelector("#bntProjetos");
 let habilidadesBnt = document.querySelector("#bntHabilidades");
-let logo = document.querySelector(".logo")
+let logo = document.querySelectorAll(".logo")
 
-logo.addEventListener("click", ()=>{
+logo.forEach((logo) => {
+    logo.addEventListener("click", ()=>{
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     })
-});
+})});
+
 class Scroll {
     windowMove(id) {
         const elementoHtml = document.querySelector(id);

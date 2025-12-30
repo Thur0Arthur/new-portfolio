@@ -111,7 +111,7 @@ nav ul li a {
         position: fixed;
         top: 55px;
         right: -60vw;
-        height: 60vh;
+        height: 350px;
         width: 50vw;
         background-color: rgba(22, 27, 34, 0.9);
         border-radius: 0 0 0 50px;
@@ -255,6 +255,9 @@ section {
     align-items: center;
     min-height: 1030px;
     width: 100vw;
+    height: auto;
+    padding-bottom: 30px;
+    background-color: #cac5c5;
 }
 .projetosArea{
     display: flex;
@@ -277,7 +280,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #343941;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -442,6 +444,124 @@ section {
     color: #fff;
 }
 
+/*SOBRE*/
+
+#sobre {
+    background-color: #343941;
+    color: #fff;
+    padding: 30px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sobre h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #E6EDF3;
+}
+.sobreTexto {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ff4d4d;
+    padding: 20px;
+    background-color: #161B22;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.sobreTexto:hover {
+    transform: translateY(-4px);
+    background-color: #3e4753;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    color: #E6EDF3;
+}
+.sobreTexto div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-left: 2px solid #ff4d4d;
+    padding-left: 10px;
+}
+.sobreTexto div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.sobreTexto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.sobreTipos {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ff4d4d;
+    font-weight: bold;
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sobreTipos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 500px;
+    border: 2px solid #ff4d4d;
+    background-color: #161B22;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.sobreTipos div:hover {
+    transform: translateY(-4px);
+    background-color: #3e4753;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    color: #E6EDF3;
+}
+@media (max-width: 1050px) {
+    .sobreTipos {
+        flex-direction: column;
+        height: auto !important;
+    }
+    .sobreTipos div {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 500px !important;
+    }
+}
+
+/*HABILIDADES*/
+#habilidades {
+    background-color: #121212;
+    color: #E6EDF3;
+    padding: 20px;
+    height: auto;
+}
+#habilidades h1 {
+    text-align: center;
+    font-size: 36px;
+}
+#habilidades > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#habilidades img {
+    width: 130px;
+    height: 80px;
+}
 
 /*footer*/
 footer {
