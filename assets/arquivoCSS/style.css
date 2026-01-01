@@ -8,11 +8,15 @@ body {
 
 .logo {
     text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+    cursor: pointer;
 }
-
-
+.logo:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+}
 a {
     text-decoration: none;
     list-style: none;
@@ -264,7 +268,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
 
@@ -434,6 +438,7 @@ section {
     background-color: #c00;
     color: #fff;
 }
+
 #modalProjetos {
     display: none;
     position: fixed;
@@ -442,6 +447,35 @@ section {
     z-index: 2000;  
     top: 0;
     color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fecharModal {
+    font-size: 24px;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    font-weight: bold;
+    right: 8%;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #f00;
+    border-radius: 30px;
+    position: absolute;
+    align-items: center;
+    display: flex;
+}
+#areaModalTotal {
+    background-color: #161B22;
+    color: #E6EDF3;
+    width: 98%;
+    height: 98%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*SOBRE*/
@@ -540,10 +574,13 @@ section {
 
 /*HABILIDADES*/
 #habilidades {
-    background-color: #121212;
+    background-color: #252525;
     color: #E6EDF3;
     padding: 20px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #habilidades h1 {
     text-align: center;
@@ -557,16 +594,95 @@ section {
     gap: 40px;
     margin-top: 30px;
     margin-bottom: 30px;
+    width: 80%;
+
+}
+#habilidades > div > div {
+    background-color: #121212;
+    box-shadow: 0 2px 10px #000;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+#habilidades > div > div:hover {
+    transform: translateY(-5px);
 }
 #habilidades img {
-    width: 130px;
-    height: 80px;
+    width: 100px;
+    height: 85px;
+}
+#habilidades p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /*footer*/
 footer {
-    background-color: #000;
+    background-color:#161B22;
     color: #fff;
-    text-align: center;
-    height: 250px;
+    text-align: start;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 40px 0;
+}
+footer h2 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 7px;
+}
+
+footer a {
+    background-color: rgba(0, 0, 0, 0);
+}
+footer a:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+footer img {
+    width: 34px;
+    height: 34px;
+}
+.footerLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.footerLogo h2{
+    margin-left: -5px;
+}
+.footerLogo p {
+    font-size: 14px;
+}
+.contatos {
+    display: flex;
+}
+.redesSociais {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+@media (max-width: 800px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
+    }
+    footer h2 {
+        margin-bottom: 5px;
+    }
+    .footerLogo, .footerContatos{
+        margin-bottom: 20px;
+    }
+
+    .footerLogo h2{
+        margin-left: -10px;
+        margin-bottom: 0px;
+    }
+    .contatos {
+        margin-top: -5px;
+    }
+    .redesSociais div {
+        margin-top: -5px;
+    }
 }
